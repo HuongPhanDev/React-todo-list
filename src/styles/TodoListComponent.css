@@ -1,0 +1,6 @@
+.todoListContainer {
+    position: absolute;
+    left: 35%;
+    top: 10vh;
+    min-width: 30%;
+}

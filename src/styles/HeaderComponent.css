@@ -1,0 +1,21 @@
+.titleComponent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleComponent h2 {
+    color: white;
+}
+
+.titleComponent button {
+   padding: 4px 7px;
+   text-align: center;
+   border: none;
+   border-radius: 5px;
+}
+
+.titleComponent svg {
+    font-size: 10px;
+  
+}

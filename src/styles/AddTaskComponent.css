@@ -1,0 +1,31 @@
+.addTask {
+    margin-top: 3vh;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.addTask .addIcon {
+    color: #a2a9b3;
+    font-weight: 900;
+    padding: 0px 5px;
+    border: 1px solid #a2a9b3;
+    border-radius: 10px;
+}
+
+.addTask .inputTask {
+    border: none;
+    color: #a2a9b3;
+    width: 80%;
+
+}
+
+.addTask .btnTask {
+    border: none;
+    background-color: white;
+    color: #a2a9b3;
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+
+.blueBg {
+  background: linear-gradient(135deg, #833ab4, #5caaee);
+  height: 30vh;
+}
+
+.grayBg {
+  background-color: #e6e6e7;
+}

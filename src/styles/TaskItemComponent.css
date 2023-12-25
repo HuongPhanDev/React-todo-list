@@ -1,0 +1,20 @@
+.taskItemContainer {
+   display: flex; 
+   justify-content: space-between;
+   padding: 2vh 0;
+   border-bottom: 1px solid rgb(166, 166, 166);
+}
+
+.taskItemContainer label {
+    width: 75%;
+}
+
+.taskItemContainer svg {
+    color: rgb(166, 166, 166);
+    font-size: 13px;
+    padding: 0 5px;
+}
+
+.taskItemContainer .completed {
+    text-decoration: line-through;
+}
