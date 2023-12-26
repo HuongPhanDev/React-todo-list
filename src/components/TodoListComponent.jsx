@@ -54,15 +54,15 @@ function TodoListComponent() {
 
   }
 
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  // const handleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   return (
     <div className='todoListContainer'>
-      <HeaderComponent darkMode={darkMode} handleDarkMode={handleDarkMode} />
+      <HeaderComponent  />
       <AddTaskComponent
         isAdded={handleTaskAdded} />
       <TaskListComponent
