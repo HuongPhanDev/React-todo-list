@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import { FaEdit, FaTrashAlt, FaCheck, FaTimes } from 'react-icons/fa';
-import '../styles/TaskItemComponent.css';
+import React, { useState } from 'react'
+import { FaEdit, FaTrashAlt, FaCheck, FaTimes } from 'react-icons/fa'
+import '../styles/TaskItemComponent.css'
 
 function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit, onChecked }) {
-  const [editMode, setEditMode] = useState(false);
-  const [editedValue, setEditedValue] = useState(task.text);
+  const [editMode, setEditMode] = useState(false)
+  const [editedValue, setEditedValue] = useState(task.text)
 
   const handleEdit = () => {
-    setEditMode(true);
-  };
+    setEditMode(true)
+  }
 
   const handleSave = () => {
-    onSaveEdit(editedValue);
-    setEditMode(false);
-  };
+    onSaveEdit(editedValue)
+    setEditMode(false)
+  }
 
   const handleCancel = () => {
-    setEditMode(false);
-  };
+    setEditMode(false)
+  }
 
   const handleChange = (e) => {
-    setEditedValue(e.target.value);
-  };
+    setEditedValue(e.target.value)
+  }
 
   const handleDelete = () => {
-    onDeleteTask();
-  };
+    onDeleteTask()
+  }
 
  
 
@@ -61,4 +61,4 @@ function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit, onCheck
   );
 }
 
-export default TaskItemComponent;
+export default TaskItemComponent

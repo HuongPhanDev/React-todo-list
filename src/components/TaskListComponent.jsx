@@ -1,6 +1,6 @@
-import React from 'react';
-import TaskItemComponent from './TaskItemComponent';
-import '../styles/TaskListComponent.css';
+import React from 'react'
+import TaskItemComponent from './TaskItemComponent'
+import '../styles/TaskListComponent.css'
 
 function TaskListComponent({ tasks, onEditTask, onDeleteTask, onSaveEdit, onClearAll, onChecked}) {
   const completedTasks = tasks.filter(task => task.completed).length;
@@ -26,4 +26,4 @@ function TaskListComponent({ tasks, onEditTask, onDeleteTask, onSaveEdit, onClea
   );
 }
 
-export default TaskListComponent;
+export default TaskListComponent

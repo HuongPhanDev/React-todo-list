@@ -12,8 +12,8 @@ function AddTaskComponent({isAdded}) {
 
   const handleAddTask = () => {
     let tasks = JSON.parse(sessionStorage.getItem('tasks')) || []
-    const newTask = { text: inputValue, completed: false };
-    tasks.push(newTask);
+    const newTask = { text: inputValue, completed: false }
+    tasks.push(newTask)
     sessionStorage.setItem('tasks', JSON.stringify(tasks))
     isAdded(tasks)
     alert("Add task successfully")
