@@ -2,7 +2,7 @@ import React from 'react'
 import TaskItemComponent from './TaskItemComponent'
 import '../styles/TaskListComponent.css'
 
-function TaskListComponent({ tasks, onEditTask, onDeleteTask, onSaveEdit, onClearAll, onChecked}) {
+function TaskListComponent({ tasks, onEditTask, onDeleteTask, onSaveEdit, onClearAll, onChecked }) {
   const completedTasks = tasks.filter(task => task.completed).length;
   const remainingTasks = tasks.length - completedTasks;
   return (
@@ -19,7 +19,7 @@ function TaskListComponent({ tasks, onEditTask, onDeleteTask, onSaveEdit, onClea
           onDeleteTask={() => onDeleteTask(index)}
           onSaveEdit={(editedValue) => onSaveEdit(index, editedValue)}
           onChecked={() => onChecked(index)}
-          
+
         />
       ))}
     </div>

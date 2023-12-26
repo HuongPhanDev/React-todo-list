@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import AddTaskComponent from './AddTaskComponent'
 import TaskListComponent from './TaskListComponent'
 import HeaderComponent from './HeaderComponent'
@@ -33,7 +33,7 @@ function TodoListComponent() {
 
   const handleSaveEdit = (index, editedValue) => {
     const updatedTasks = tasks.map((task, i) =>
-    i === index ? { ...task, text: editedValue } : task
+      i === index ? { ...task, text: editedValue } : task
     )
     setTasks(updatedTasks)
     sessionStorage.setItem('tasks', JSON.stringify(updatedTasks))
@@ -47,7 +47,7 @@ function TodoListComponent() {
 
   const handleChecked = (id) => {
     const updatedTasks = tasks.map((task, i) =>
-    i === id ? { ...task, completed: !task.completed } : task
+      i === id ? { ...task, completed: !task.completed } : task
     )
     setTasks(updatedTasks)
     sessionStorage.setItem('tasks', JSON.stringify(updatedTasks))
@@ -62,16 +62,16 @@ function TodoListComponent() {
 
   return (
     <div className='todoListContainer'>
-      <HeaderComponent darkMode={darkMode} handleDarkMode={handleDarkMode}/>
-      <AddTaskComponent 
-        isAdded={handleTaskAdded}/>
-      <TaskListComponent  
-        tasks={tasks} 
-        onEditTask={handleEdit} 
-        onDeleteTask={handleDelete} 
+      <HeaderComponent darkMode={darkMode} handleDarkMode={handleDarkMode} />
+      <AddTaskComponent
+        isAdded={handleTaskAdded} />
+      <TaskListComponent
+        tasks={tasks}
+        onEditTask={handleEdit}
+        onDeleteTask={handleDelete}
         onSaveEdit={handleSaveEdit}
         onClearAll={handleClearAll}
-        onChecked={handleChecked}/>
+        onChecked={handleChecked} />
     </div>
   )
 }

@@ -12,7 +12,7 @@
 .addTask .addIcon {
     color: #a2a9b3;
     font-weight: 900;
-    padding: 0px 5px;
+    padding: 0px 3px;
     border: 1px solid #a2a9b3;
     border-radius: 10px;
 }
@@ -23,7 +23,9 @@
     width: 80%;
 
 }
-
+.addTask .inputTask:focus {
+    outline: none;
+}
 .addTask .btnTask {
     border: none;
     background-color: white;

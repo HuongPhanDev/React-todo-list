@@ -27,19 +27,18 @@ function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit, onCheck
     onDeleteTask()
   }
 
- 
+
 
 
   return (
     <div className='taskItemContainer'>
-      <input type="checkbox" name="taskItem" id="taskItem" checked={task.completed} onChange={() => onChecked(task.id)}/>
+      <input type="checkbox" name="taskItem" id="taskItem" checked={task.completed} onChange={() => onChecked(task.id)} />
       {editMode ? (
         <>
           <input
             type="text"
             value={editedValue}
             onChange={handleChange}
-            autoFocus
           />
           <span className='taskIcons'>
             <FaCheck onClick={handleSave} className="checkIcon" />
@@ -48,7 +47,7 @@ function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit, onCheck
         </>
       ) : (
         <>
-          <label htmlFor="taskItem" className={task.completed ? 'taskCompleted': ''} >
+          <label htmlFor="taskItem" className={task.completed ? 'taskCompleted' : ''} >
             {task.text}
           </label>
           <span className="taskIcons">

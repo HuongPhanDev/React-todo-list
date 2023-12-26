@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import '../styles/AddTaskComponent.css'
 
 
-function AddTaskComponent({isAdded}) {
+function AddTaskComponent({ isAdded }) {
 
   const [inputValue, setInputValue] = useState('')
 
-  const handleInputChange =  e => {
+  const handleInputChange = e => {
     setInputValue(e.target.value || '')
   }
 
@@ -16,8 +16,9 @@ function AddTaskComponent({isAdded}) {
     tasks.push(newTask)
     sessionStorage.setItem('tasks', JSON.stringify(tasks))
     isAdded(tasks)
+    setInputValue("")
     alert("Add task successfully")
-}
+  }
 
   return (
     <div className="addTask">
