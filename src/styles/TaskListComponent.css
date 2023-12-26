@@ -17,3 +17,8 @@
     background-color: transparent;
     border: none;
 }
+
+.taskListContainer .taskCompleted {
+    text-decoration: line-through;
+    color: gray;
+}

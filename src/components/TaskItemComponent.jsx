@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { FaEdit, FaTrashAlt, FaCheck, FaTimes } from 'react-icons/fa';
 import '../styles/TaskItemComponent.css';
 
-function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit }) {
+function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit, onChecked }) {
   const [editMode, setEditMode] = useState(false);
-  const [editedValue, setEditedValue] = useState(task);
+  const [editedValue, setEditedValue] = useState(task.text);
+
   const handleEdit = () => {
     setEditMode(true);
   };
@@ -26,13 +27,12 @@ function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit }) {
     onDeleteTask();
   };
 
-  const handleOnClick = () => {
-    
-  }
+ 
+
 
   return (
     <div className='taskItemContainer'>
-      <input type="checkbox" name="taskItem" id="taskItem" onClick={handleOnClick}/>
+      <input type="checkbox" name="taskItem" id="taskItem" checked={task.completed} onChange={() => onChecked(task.id)}/>
       {editMode ? (
         <>
           <input
@@ -48,8 +48,8 @@ function TaskItemComponent({ task, onEditTask, onDeleteTask, onSaveEdit }) {
         </>
       ) : (
         <>
-          <label htmlFor="taskItem" className={task.completed ? 'completed' : ''}>
-            {task}
+          <label htmlFor="taskItem" className={task.completed ? 'taskCompleted': ''} >
+            {task.text}
           </label>
           <span className="taskIcons">
             <FaEdit onClick={handleEdit} className="editIcon" />

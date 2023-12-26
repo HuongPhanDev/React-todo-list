@@ -32,13 +32,29 @@ function TodoListComponent() {
   };
 
   const handleSaveEdit = (index, editedValue) => {
-    const updatedTasks = [...tasks];
-    updatedTasks[index] = editedValue;
+    const updatedTasks = tasks.map((task, i) =>
+    i === index ? { ...task, text: editedValue } : task
+    );
     setTasks(updatedTasks);
     sessionStorage.setItem('tasks', JSON.stringify(updatedTasks));
     alert("Update task successfully")
   };
 
+  const handleClearAll = () => {
+    sessionStorage.clear()
+    setTasks([])
+  }
+
+  const handleChecked = (id) => {
+    const updatedTasks = tasks.map((task, i) =>
+    i === id ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(updatedTasks);
+    sessionStorage.setItem('tasks', JSON.stringify(updatedTasks));
+
+  }
+
+  
   return (
     <div className='todoListContainer'>
       <HeaderComponent />
@@ -48,7 +64,9 @@ function TodoListComponent() {
         tasks={tasks} 
         onEditTask={handleEdit} 
         onDeleteTask={handleDelete} 
-        onSaveEdit={handleSaveEdit}/>
+        onSaveEdit={handleSaveEdit}
+        onClearAll={handleClearAll}
+        onChecked={handleChecked}/>
     </div>
   )
 }
